@@ -1,13 +1,13 @@
 #include<stdio.h>
+void swap(double *a, double *b){
+	double somau;
+	somau = *a;
+	*a = *b;
+	*b = somau;
+}
 int main(){
-	int n, uoc=0; scanf("%d",&n);
-	while(n<1){
-		printf("error, vui long nhap lai\n");
-		scanf("%d",&n);
-	}
-	for(int i=1;i<=n;i++){
-		if(n%i==0) uoc++;
-	} 
-	printf("%d",uoc);
+	double a,b; scanf("%lf%lf",&a,&b);
+	swap(&a,&b);
+	printf("%.2lf %.2lf",a,b);
 	return 0;
 }
